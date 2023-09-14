@@ -1,4 +1,4 @@
-import {dbpool} from '../db.js'
+import {dbpool} from '../db/connection.js'
 
 export const ping = async (req, res) => {
     const [result] = await dbpool.query('SELECT "pong" AS result')

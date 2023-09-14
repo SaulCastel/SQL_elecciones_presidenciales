@@ -1,9 +1,5 @@
-import express from 'express'
-import indexRoutes from './routes/index.routes.js'
+import app from './app.js'
 
-const app = express()
-
-app.use(indexRoutes)
-
-app.listen(3000)
-console.log('Server running!')
+const port = app.get('port')
+app.listen(port)
+console.log('Server running on port', port)
