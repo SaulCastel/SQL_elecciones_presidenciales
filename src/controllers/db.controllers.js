@@ -2,10 +2,7 @@ import path from 'path'
 import fs from 'fs'
 import { createConnection } from 'mysql2/promise';
 import {db} from '../db/connection.js'
-import { DB_DATABASE } from '../db/config.js';
-
-import { fileURLToPath } from 'url';
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+import { DB_DATABASE,__dirname } from '../config.js';
 
 export const createModel = async (req, res) => {
     const script = fs.readFileSync(path.join(__dirname, '../db/database.sql'), 'utf8')
