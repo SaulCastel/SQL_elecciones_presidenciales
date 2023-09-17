@@ -1,5 +1,5 @@
 SELECT
-    CONCAT(HOUR(fecha_hora),':', MINUTE(fecha_hora)) AS hora,
+    DATE_FORMAT(fecha_hora, '%H:%i') AS hora,
     COUNT(*) AS conteo
 FROM proy1bases1.voto
 GROUP BY hora
